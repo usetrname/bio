@@ -1,0 +1,152 @@
+<head><style>
+    .lista {
+border: 1px solid black;
+padding: 2px;
+    }
+.introduzione {
+    background-color: lightgray;
+    padding: 2px;
+}
+.musica{
+    background-color: blanchedalmond;
+}
+.sport{
+    background-color: yellow;
+}
+.passioni{
+    background-color: aquamarine;
+}
+.pulsante{
+    border: 1px solid red;
+    padding: 5px;
+    margin-top: 15px;
+}
+.titoletto{
+    padding: 10px;
+    cursor: pointer;
+}
+.scorre{
+animation: cambioColori 1s infinite; 
+}
+.descrizione{
+    background-color: aquamarine;
+}
+.bio{
+    padding: 10px;
+}
+#mappa{
+    display: none;
+}
+#video{
+    display: none;
+}
+.mappa{
+    background-color: lightgray;
+}
+@keyframes cambioColori{
+0%{color:blueviolet;}
+25%{color:blue;}
+50%{color:cadetblue;}
+75%{color:cyan;}
+100%{color:cyan;}
+}
+
+.riferimenti{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+footer{
+    margin-top: 40px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<header class="introduzione">
+<h1>giovanni beretti</h1>
+<h3>studente</h3>
+<marquee class="scorre">ciao</marquee>
+</header>
+<main>
+<ul class="lista">
+    <b>anagrafica</b>
+    <li>data di nascita:8/novembre/2007</li>
+    <li>luogo di nascita:milano</li>
+    <li>residenza:baggio</li>
+    <li>altezza:1.80</li>
+</ul>
+<div class="descrizione">
+    <h5 class="titoletto">bio<i class="fa fa-thumbs-up"></i></h5>
+    <p class="bio">
+        sono una persona,mi piace la storia,disengare e leggere.
+    </p>
+</div>
+<div class="musica">
+    <h5 id="musica" class="titoletto" onclick="appari()">musica<i class="fa fa-music"></i></h5>
+    <div id="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJ9rUzIMcZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<div class="mappa">
+    <h5 class="titoletto" onclick="appariMappa()">luogo di lavoro<i class="fa fa-map-marker"></i></h5>
+    <div id="mappa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12650.867654166048!2d9.17889852040146!3d45.47179172703939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sit!2sit!4v1674563479682!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+<div class="sport">
+    <h5  class="titoletto">sport</h5>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Bc588DD6xmI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="passioni">
+    <h5 class="titoletto">passioni</h5>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7AlclDL4nH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+</main>
+<footer>
+   <!---- <span> <a class=pulsante href="malito:giovanni.beretti.edu@scuolacova.net">contattami</a></span>-->
+    <div class="riferimenti">
+        <a href="www.google.it">
+
+        <i class="fa fa-instagram"></i>
+    </a>
+        <i class="fa fa-facebook"></i>
+        <a href="malito:giovanni.beretti.edu@scuolacova.net">
+        <i class="fa fa-envelope-o"></i>
+    </a>
+    </div>
+</footer>
+<script>
+    console.log("funziono");
+
+    var b=0;
+    function appariMappa() {
+        if (b == 0) {
+            document.getElementById("mappa").style.display="initial";
+            b=1;
+        }
+        else if (b ==1) {
+            document.getElementById("mappa").style.display="none";  
+            b=0;
+        }
+    }
+
+    var a=0;
+    function appari() {
+if (a == 0) {
+    document.getElementById("Video").style.display ="initial";
+    a = 1;
+}
+else if (a == 1) {
+    document.getElementById("Video").style.display ="none";
+    a=0;
+}
+
+
+    }
+</script>
+
+</body>
